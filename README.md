@@ -22,12 +22,15 @@ GoogleBBR一键脚本
 [https://down.vpsmm.com/shell/serverspeeder_appex.sh](https://down.vpsmm.com/shell/serverspeeder_appex.sh)  
 另一位爱好者开发的锐速一键安装脚本，开发：  
 [https://github.com/0oVicero0/serverSpeeser_Install](https://github.com/0oVicero0/serverSpeeser_Install)  
+
 ##一键安装finalspeed功能，支持全系架构
 FS一键包  
 [https://down.vpsmm.com/shell/finalspeed.sh](https://down.vpsmm.com/shell/finalspeed.sh)  
+
 ##一键安装l2tp的v7n服务器端，输入3个指令即可
 L2TP一键包  
 [https://down.vpsmm.com/shell/l2tp.sh](https://down.vpsmm.com/shell/l2tp.sh)  
+
 ##每天自动备份MYSQL及打包网站目录
 自动备份脚本  
 [https://down.vpsmm.com/shell/AutoBackupToFtp.sh](https://down.vpsmm.com/shell/AutoBackupToFtp.sh)  
