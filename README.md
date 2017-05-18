@@ -44,9 +44,9 @@ Linux安装桌面
 [https://down.vpsmm.com/shell/xwindow.sh](https://down.vpsmm.com/shell/xwindow.sh)  
 
 ##vestcp的ss-panel,ss多用户控制面板一键安装脚本  
-![http://vestacp.com/pub/vst-install.sh](http://vestacp.com/pub/vst-install.sh)  
+[http://vestacp.com/pub/vst-install.sh](http://vestacp.com/pub/vst-install.sh)  
 这是centos的  
-![http://vestacp.com/pub/vst-install-rhel.sh](http://vestacp.com/pub/vst-install-rhel.sh)
+[http://vestacp.com/pub/vst-install-rhel.sh](http://vestacp.com/pub/vst-install-rhel.sh)
 
 使用方法
 
