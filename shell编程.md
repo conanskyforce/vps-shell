@@ -50,7 +50,7 @@ https://api.github.com/repos/conanskyforce/123/commits
 
 https://api.github.com/repos/conanskyforce/conanskyforce.github.io/stats/commit_activity
 
-mysql备份脚本  
+##mysql备份脚本  
 
 	#!/bin/bash
 	#auto backup mysql db
@@ -84,3 +84,12 @@ mysql备份脚本
 crontab -e 设置定时执行任务，保存后的文件保存在 /var/spool/cron目录下，也可以vi /etc/crontab 添加要定时执行的任务  
 
 	0  0  *  *  *  /bin/bash /root/conan/auto_bakup_mysql.sh >>/tmp/mysql_bak.log
+
+##一键安装LAMP脚本
+读取键盘输入变量，并将其赋值给变量  
+
+	read -p "input a val:"  val
+	echo $val
+
+***
+
