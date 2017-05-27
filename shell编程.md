@@ -93,3 +93,103 @@ crontab -e 设置定时执行任务，保存后的文件保存在 /var/spool/cro
 
 ***
 
+	if [ -z '$1' ];then
+		echo -e "\033[36m请选择你要安装的选项\033[0m"
+		echo -e "\033[32m1.编译安装Apache服务器\033[0m"
+		echo -e "\033[36m2.编译安装Mysql服务器\033[0m"
+		echo -e "\033[36m3.编译安装PHP服务器\033[0m"
+		echo -e "\033[36m4.配置index.php并启动LAMP环境\033[0m"
+		echo -e "\033[31mUsage:{ /bin/bash $0 1|2|3|4|help}\033[0m"
+		exit
+	fi
+	#auto install apacha
+	if [$1 -eq 1];then
+		wget -c $httpd_url/$httpd_file &&tar -zxvf $httpd_file &&cd $httpd_file &&./configure --prefix=$httpd_prefix
+		if [$? -eq 0];then
+			make &&make install &&make clean
+			echo -e '\033[32mThe $httpd_dir server installed successfully!\033[0m'
+		else
+			echo -e '\033[32mThe $httpd_dir server installed failed!\033[0m'
+			exit
+		fi
+	fi
+	
+	#auto install mysql
+	#easy way to install mysql
+	#yum install -y mysql
+	if [["$1" -eq "2"]];then
+		yum install -y mysql
+		if [$? -eq 0];then
+			echo -e '\033[32mThe mysql server installed successfully!\033[0m'
+		else
+			echo -e '\033[32mThe mysql server installed failed!\033[0m'
+			exit
+		fi
+	fi
+	
+	#auto install php
+	if [["$1" -eq "3"]];then
+		yum install -y php php-mysql php-gd libjpeg* php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-bcmath php-mhash libmcrypt
+		if [$? -eq 0];then
+			echo -e '\033[32mThe php server installed successfully!\033[0m'
+		else
+			echo -e '\033[32mThe php server installed failed!\033[0m'
+			exit
+		fi
+	fi
+
+##for 循环  
+
+	expr arg1 +-*/ arg2
+
+	j=0
+	for ((i=1;i<=100;i++))
+	
+	do
+		j=`expr $i + $j`
+	done
+	echo $j
+	
+	sh +x xx.sh 观看脚本执行过程
+
+##查找相关log文件并打包
+
+	#!/bin/bash
+	
+	for i in `find /var -name "*.log"`
+	do
+		tar -zcvf $i.tar.gz %i
+	done
+
+##while 循环
+
+	#!/bin/bash
+	i=1;
+	while [[ $i -lt 10 ]];do
+		echo $i;
+		((i++));
+	done;
+	
+	#读取命令行的变量保存到num中，用$num访问
+	read -p "pls input a number:" num
+
+
+##while逐行读取文件内容
+
+	while read line
+	do
+		echo $line
+	done </etc/hosts
+
+
+
+
+
+
+
+
+
+
+
+
+
