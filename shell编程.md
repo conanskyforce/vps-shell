@@ -181,13 +181,54 @@ crontab -e 设置定时执行任务，保存后的文件保存在 /var/spool/cro
 		echo $line
 	done </etc/hosts
 
+	awk '{print $s2}'#打印第二列
+
+##utile循环
+相比while，是直到条件满足才推出  
 
 
+##case 选择语句
 
+	case $1 in
+		apache )
+		echo "install apache"
+		yum install -y httpd
+		;;
+		mysql )
+		echo "install mysql"
+		yum install -y mysql
+		;;
+		php )
+		echo "install php"
+		yum install -y php
+		;;
+		* )
+		echo "Usage $0 apache|mysql|php"
+		;;
+	esac
 
+##slect 选择
 
-
-
+	PS3="select one"
+	select i in "mysql" "php" "apache"
+	do
+	case $i in
+		apache )
+		echo "install apache"
+		yum install -y httpd
+		;;
+		mysql )
+		echo "install mysql"
+		yum install -y mysql
+		;;
+		php )
+		echo "install php"
+		yum install -y php
+		;;
+		* )
+		echo "Usage $0 apache|mysql|php"
+		;;
+	esac
 
 
 
